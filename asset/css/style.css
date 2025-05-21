@@ -1,0 +1,421 @@
+
+/* #0c3854  font
+#3ba0e3 cal to action
+#d0e7f5  most
+*/
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #252219;
+}
+/* header */
+/* navbar */
+header{
+    background-color: #fff;
+    margin-top: 0%;
+    padding-top: 0%;
+    isolation: isolate;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+    align-items: center;
+    position:fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: inset 3px ;
+    top: 0;
+}
+
+/* القوائم */
+.nav-link{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+ 
+li{
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+
+}
+li a{
+    text-decoration: none;
+    color: #252219;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* searsh*/
+
+/* From Uiverse.io by satyamchaudharydev */ 
+/* this is a recreation of twitter search in css */
+.form {
+    --input-text-color: #6c4e37;
+    --input-bg-color: #fff;
+    --focus-input-bg-color: transparent;
+    --text-color: #c79b73;
+    --active-color: #6c4e37;
+    --width-of-input: 200px;
+    --inline-padding-of-input: 1.2em;
+    --gap: 0.9rem;
+  }
+  /* form style */
+  .form {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: var(--width-of-input);
+    position: relative;
+    isolation: isolate;
+  }
+  /* a fancy bg for showing background and border when focus. */
+  .fancy-bg {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background: var(--input-bg-color);
+    border-radius: 30px;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  /* label styling */
+  label {
+    width: 100%;
+    padding: 0.8em;
+    height: 40px;
+    padding-inline: var(--inline-padding-of-input);
+    display: flex;
+    align-items: center;
+  }
+  
+  .search,.close-btn {
+    position: absolute;
+  }
+  /* styling search-icon */
+  .search {
+    fill: var(--text-color);
+    left: var(--inline-padding-of-input);
+  }
+  /* svg -- size */
+  svg {
+    width: 17px;
+    display: block;
+  }
+  /* styling of close button */
+  .close-btn {
+    border: none;
+    right: var(--inline-padding-of-input);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.1em;
+    width: 20px;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--active-color);
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* styling of input */
+  .input {
+    color: var(--input-text-color);
+    width: 100%;
+    margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+    background: none;
+    border: none;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--text-color)
+  }
+  /* input background change in focus */
+  .input:focus ~ .fancy-bg {
+    border: 1px solid var(--active-color);
+    background: var(--focus-input-bg-color);
+  }
+  /* search icon color change in focus */
+  .input:focus ~ .search {
+    fill: var(--active-color);
+  }
+  /* showing close button when typing */
+  .input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+  }
+
+  /* زرار التواصل */
+/* From Uiverse.io by Madflows */ 
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-radius: 1.5rem;
+    background: #6c4e37;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 1cm;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      #c79b73 10.8%,
+      rgba(108,78,55,1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+ /* زرار السلة  */
+  .crt{
+    position: relative;
+    overflow: hidden;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-radius: 1.5rem;
+    background: #fff;
+    background-size: 400%;
+    color: #6c4e37;
+    border: 2px solid #6c4e37;
+    cursor: pointer;
+    margin-left: 0.5cm;
+  }
+  
+.nav3{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2cm;
+    
+}
+
+/* section hero*/
+
+
+.COVER{
+    height: 100%;
+    width: 100%;
+    border-radius: 20PX ;
+    margin-top: 1.8cm;
+    
+}
+
+
+/* --------------- */
+.child{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    color: #6c4e37;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 1cm;
+}
+ .aside{
+    width: 40%;
+ }
+
+ .aside1{
+    width: 40%;
+ }
+
+
+
+/* الكاردات اللي معمولة بالجافا  */
+#parent{
+  justify-content: space-between;
+  margin: 0.5cm;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 #6c4e37;
+  width: 7cm;
+  height: 10.9cm;
+  margin: 10px;
+  text-align: center;
+  font-family: arial;
+  color: #6c4e37;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /* margin-top: 2cm; */
+
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #6c4e37;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 0%;
+  
+ 
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+.image{
+  width: 4cm;  /* يجعل الصورة تأخذ عرض الكارد بالكامل */
+  height: 6cm; /* يضمن الحفاظ على تناسب الصورة */
+  object-fit: cover; 
+  cursor: pointer;
+  overflow: hidden;
+
+}
+
+/* sidnavbar */
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ 
+.prod{
+  display: flex;
+  margin-bottom: 2cm;
+}
+.sidenav {
+  height: 600px;
+  width: 260px;
+  /* position: fixed; */
+  /* z-index: 3; */
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  /* overflow-x: hidden; */
+  padding-top: 20px;
+  border: 2px solid #c79b73;
+  border-radius: 10px;
+  margin: 1cm;
+}
+
+.sidenav .filt:hover {
+  color: #6c4e37;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+.filt{
+  display: block;
+  margin: 1cm;
+  width: 4.5cm;
+  height: 1cm;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #c79b73;
+  border: 2px solid #c79b73;
+  border-radius: 10px;
+}
+
+
+.footer {
+  background-color: #b2cfb8; 
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer-cont {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px; /* مسافة بين العناصر */
+}
+
+/* روابط التنقل */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 16px;
+}
+
+.footer-links ul li a:hover {
+  color: #6c4e37;
+}
+
+/* الخريطة */
+.footer iframe {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  margin-top: 10px;
+}
+
+/* add cart page  */
+
+.contain{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25%;
+}
